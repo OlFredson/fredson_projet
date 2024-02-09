@@ -1,0 +1,34 @@
+
+/************************************** CSS SPECIFIQUE DE LA PAGE CONTACT **************************************/
+
+@keyframes hello {
+    from{
+        transform: translateY(-300px);
+        opacity: 0.2;
+    }
+    fo{
+        transform: translate(0);
+    }
+    
+}
+/*Pages active NAV*/
+#contact {
+    color: rgb(217, 156, 169);
+ 
+}
+
+h1{
+    font-size: 4em;
+    color: rgb(109, 90, 86);
+    text-shadow: rgb(217, 156, 169, 20%) 10px 10px;
+    margin-bottom: 2em;
+}
+
+h4{
+    color: rgb(109, 90, 86);
+    margin-bottom: 2em;
+}
+
+main {
+    animation: hello 2s;
+}

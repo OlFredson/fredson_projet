@@ -1,0 +1,194 @@
+
+/************************************** CSS SPECIFIQUE DE LA PAGE ACCUEIL **************************************/
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(0);
+        
+    }
+    50% {
+        
+        transform: translateX(600px);
+    
+    }
+    100%{
+        transform: scale(2.5);
+        translate: 600px;
+
+    }
+}
+
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(35em);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+
+    
+/*Pages active NAV*/
+#accueil{
+    color: rgb(217, 156, 169);
+
+}
+
+/*Baniere image*/
+
+#baniere img {
+    width: 100%;
+
+}
+
+/*Section "Presentation" style*/
+
+.presentation {
+    text-align: center;
+    margin-top: 8em;
+    margin-bottom: 8em;
+    color: rgb(217, 156, 169);
+    
+ }
+
+.presentation p, h2 {
+    padding-bottom: 2em;
+}
+
+/*Main sections style*/
+
+/*Section "Decouvrez nos creations" style*/
+section h2{
+    padding: 1em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h2 > img {
+    margin-left: 0.5em;
+}
+
+.creationscake {
+    display: flex;
+    text-align: center;
+    padding-bottom: 2em;
+
+}
+
+.creationsimg img {
+   
+    align-items: center;
+    width: 60%;
+    border-radius: 10%;
+}
+
+
+
+main section:nth-child(2) p {
+    align-self: center;
+    margin-right: 4em;
+    
+}
+
+
+/*Section "Pour tout vos evenements" style*/
+
+.evenements h2{
+    padding: 1em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.event {
+    display: flex;
+    text-align: center;
+    padding-bottom: 2em;
+
+}
+
+
+.eventimg img {
+   
+    align-items: center;
+    width: 30%;
+    border-radius: 10%;
+}
+
+
+
+.evenements p {
+    align-self: center;
+    margin-left: 4em;
+    
+}
+
+/*Taille des titres des photos (figcaption)*/
+figcaption {
+    font-size: 2em;
+}
+
+/*Section "Fetes religieuses" style*/
+
+main section:last-child h2{
+    padding: 1em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.special {
+    display: flex;
+    text-align: center;
+    padding-bottom: 2em;
+
+}
+
+img[alt*="theme"] {
+   
+    align-items: center;
+    width: 30%;
+    border-radius: 10%;
+}
+
+.special figure {
+    width: 80%;
+}
+
+
+div p {
+    align-self: center;
+    margin-right: 4em;
+    
+}
+
+/*Shadow sur toutes les images*/
+img {
+    box-shadow: 10% 10px 1px 1px grey;
+}
+
+/*Animations*/
+main .creations, .evenements, .fetesrel {
+    border: 0.2em solid rgb(217, 156, 169);
+    margin-bottom: 6em;
+    box-shadow: 20px 20px rgba(217, 156, 169,.15);
+    transition: all .4s ease;
+    color: rgba(217, 156, 169)
+}
+
+main .creations:hover, .evenements:hover, .fetesrel:hover {
+    border-radius: 0% 0% 80% 80% / 0% 0% 8% 8% ;
+    box-shadow: 10px 10px rgba(217, 156, 169,.25);
+
+    }
+
+.creationsimg article:hover  {
+    animation: slideInLeft 4s;
+    
+}
+
+
+

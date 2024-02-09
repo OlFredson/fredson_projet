@@ -1,0 +1,226 @@
+
+/* Police d'ecriture*/
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+                
+
+@keyframes slideInTop {
+  from{
+      transform: translateY(-5em);
+      opacity: 0;
+  }
+  to{
+      transform: translateY(0);
+      opacity: 1;
+  }
+  
+}
+
+@keyframes disapear {
+  0% {
+    transform: translateX(0x);
+    
+  }
+  25% {
+    transform: translate(800px, 600px);
+
+  }
+  50% {
+    transform: translate(1500px, -400px);
+
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hello {
+  from{
+      transform: translateY(-900px);
+      opacity: 0.2;
+  }
+  fo{
+      transform: translate(0);
+  }
+}
+
+@keyframes topbottom {
+  from{
+      transform: translateY(-900px);
+
+  }
+  fo{
+      transform: translate(0);
+  }
+}
+/*Body*/
+body {
+  margin: 0;
+}
+
+
+p, h1, h2, h3, h4{
+  font-family: 'Marck Script', cursive, Arial, Helvetica, sans-serif;
+
+}
+/*Style header*/
+
+header {
+  background-color: rgb(255, 255, 255, .95);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8em;
+  font-size: 1.5em;
+}
+
+header figure img {
+  padding-top: 0;
+}
+
+header figure{
+  margin: 0;
+}
+
+/*Style du logo*/
+
+header img {
+  align-self: center;
+  width: 8em;
+  padding-top: 1em;
+ 
+}
+
+/*Flex + style de la navbar*/
+
+header .navbar ul {
+  display: flex;
+  list-style: none;
+  margin-left: 5em;
+ 
+}
+
+nav a {
+  width: 1em;
+  padding: 1em;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar ul li.active a {
+  color: red;
+  font-weight: 600;
+}
+
+
+
+/*Main : Personnalisation générale*/
+
+main {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+p {
+  font-size: 1.5em;
+}
+
+/* Retour haut de page*/
+#retourhaut {
+  text-align: right;
+  margin-right: 3em;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*FOOTER : Personalisation générale*/
+
+footer {
+  margin-bottom: 0;
+  margin-top: 10em;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2em;
+  background-color: rgba(251, 185, 203, 0.5);
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(109, 90, 86);
+}
+
+/*FOOTER : Personnalisation Logo*/
+.foot figure img {
+  width: 8em;
+}
+
+.foot figure {
+  align-self: center;
+}
+
+/*FOOTER : Personnalisation Bouton Localisation*/
+
+.button {
+  color: rgb(160, 104, 104) ;
+  text-decoration: none;
+  border: 3px solid rgb(160, 104, 104);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+/*FOOTER : Position icone insta*/
+.réseaux  {
+  width: 3em;
+  align-self: center;
+}
+
+/*FOOTER : Icone mentions legales*/
+
+.mlegales {
+  display: flex;
+}
+
+.mlegales p, a {
+  align-self: center;
+}
+
+.mlegales p {
+  padding-left: 1em;
+  text-decoration: none;
+}
+
+.mlegales a  {
+  text-decoration: none;
+  color: black;
+}
+
+
+/*Animations - transformation - Transitions*/
+header {
+  animation: slideInTop 2s ease 2s;
+}
+
+a:hover {
+  color: rgb(217, 156, 169);
+  text-decoration-line: underline;
+  
+}
+
+header figure img {
+  animation: disapear 4s ease 3s;
+}
+
+#baniere, header {
+  animation: hello 3s;
+}
+
+main {
+  animation: topbottom 3s
+}

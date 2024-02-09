@@ -1,0 +1,112 @@
+@keyframes scale {
+    from{
+        transform: scale(2);
+      
+    }
+    to{
+        transform: scale(1);
+    }
+    
+}
+/*Baniere haut de page*/
+header + section  img{
+    width: 100%;
+ 
+ }
+
+
+hr {
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+/*Main style*/
+main {
+    margin-top: 10em;
+}
+
+
+/*1er Section "Layer cakes et... style */
+main section:first-child img {
+    width: 30em;
+    box-shadow: 7px 5px 19px 0px grey;
+}
+
+
+main section:first-child{
+    display: flex;
+    justify-content: end;
+
+}
+
+main article:last-child {
+    align-self: center;
+}
+
+
+/*Taille des titres et paragraphe commun aux pages thématique*/
+h1 {
+    font-size: 5em;
+    margin: 0;
+    padding-top: 1em;
+}
+
+h2 {
+    font-size: 4em;
+    color: rgb(109, 90, 86);
+    text-shadow: rgb(217, 156, 169, 20%) 10px 10px;
+
+}
+
+p {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 2em;
+    color: rgb(109, 90, 86);;
+
+}
+
+/*Section GRID / galeries images*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 15em 15em 15em 15em;
+    grid-template-rows: auto auto;
+    gap: 1em;
+}
+
+.grid-item figure {
+   margin: 0;
+    
+}
+.grid-item figure img {
+    width: 15em;
+}
+
+main section:nth-child(2) {
+    width: 100%;
+}
+
+/*Style du bouton "Devis"*/
+button {
+    padding: 1em 3em;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(pink, 60%, rgb(241, 171, 79));
+
+    margin-top: 2em;
+    border-radius: 20px;
+}
+
+button > a {
+    text-decoration: none;
+    color: rgb(109, 90, 86);
+}
+
+/*Animations*/
+
+.grid-container img:hover {
+    animation: scale 10s;
+}

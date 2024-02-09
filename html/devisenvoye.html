@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devis - La Fée Sucrée</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets\css\theme4.css">
+    <link rel="stylesheet" href="/assets\css\theme-common.css">
+    <link rel="stylesheet" href="/assets\css\theme5.css">
+
+</head>
+
+<body>
+    <!------------------------------------------------HEADER------------------------------------------------>
+    <header>
+        <figure>
+            <img src="/assets\images\Logo\logo3.png" alt="Logo du site" />
+        </figure>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/index.html" target="_blank">Accueil</a></li>
+                <li><a href="/html\layercakes.html" target="_blank">Layer Cakes</a></li>
+                <li><a href="/html/numbercakes.html" target="_blank">Number Cakes</a></li>
+                <li><a href="/html/mignardises.html" target="_blank">Mignardises</a></li>
+                <li><a href="/html/devis.html" target="_blank">Devis</a></li>
+                <li><a href="/html/contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--Baniere-->
+    <section class="baniere">
+        <img src="/assets\images\packages\baniere.svg" alt="">Demande de devis envoyé !
+    </section>
+    <!------------------------------------------------MAIN------------------------------------------------>
+    <main class="form-container">
+        <h2>Demande de devis </h2>
+        <form action="" method="post" id="formulaire">
+
+            <!--Input Nom -->
+            <section class="form-group devisname">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom" required
+                    pattern="[A-Za-zÀ-ÿ '-]+" />
+            </section>
+
+            <!--Input Prenom -->
+            <section class="form-group">
+                <label for="firstname">Prénom :</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prenom" required
+                    pattern="[A-Za-zÀ-ÿ '-]+" />
+            </section>
+
+            <!--Input Téléphone -->
+            <section class="form-group">
+                <label for="telno">Téléphone :</label>
+                <input type="tel" id="telno" name="telno" placeholder="06 xx xx xx xx" required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                <span class="error-message">Merci de saisir un de numéro valide.</span>
+                <span class="valid-message">Le numéro semble correcte.</span>
+            </section>
+
+            <!--Input Mail-->
+            <section class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre @ mail" required />
+                <span class="error-message">Merci de saisir une adresse email valide. Ex: mail@toto.fr .</span>
+                <span class="valid-message">L'adresse email semble correcte.</span>
+            </section>
+
+            <!--Input Date-->
+            <section class="form-group">
+                <label for="dateretrait">Date souhaitée du retrait de la commande :</label>
+                <input type="date" id="dateretrait" name="dateretrait" required />
+            </section>
+
+            <!---------------Input type de gateaux--------------->
+
+            <fieldset>
+                <legend>Choisir le type de produits souhaités:</legend>
+                <!--Section Layer cake-->
+                <section class="container layer">
+                    <input type="checkbox" id="layercake" name="layercake" />
+                    <label for="layercake">Layer Cake x1 (si plusieurs, merci de le preciser dans le champ "Remarques")
+                        : </label>
+                    <select name="layercake" id="layercakeqty">
+                        <option value="qty">-Nbr de parts-</option>
+                        <option value="twelve">12 parts</option>
+                        <option value="fifteen">15 parts</option>
+                        <option value="twentyfive">25 parts</option>
+                    </select>
+                    <select name="layersponge" id="layersponge">
+                        <option value="qty">-Saveur du biscuit-</option>
+                        <option value="twelve">Vanille</option>
+                        <option value="fifteen">Chocolat</option>
+                    </select>
+                    <select name="layerflavor" id="layerflavor">
+                        <option value="qty">-Saveur interieur-</option>
+                        <option value="twelve">Creme vanille + framboise</option>
+                        <option value="twelve">Creme vanille + mangue passion</option>
+                        <option value="twelve">Creme vanille + speculos et caramel</option>
+                        <option value="twelve">Creme vanille + oroe</option>
+                        <option value="twelve">Creme Nutella</option>
+                        <option value="twelve">Creme coco + ananas</option>
+                    </select>
+                </section>
+
+
+                <!--Section Piece montée-->
+                <section class="container piece">
+                    <input type="checkbox" id="pieceMontée" name="pieceMontée" />
+                    <label for="pieceMontée">Pièce montée x1 (si plusieurs, merci de le preciser dans le champ
+                        "Remarques") :
+                    </label>
+                    <select name="pieceMontée" id="pieceMontéeQty">
+                        <option value="qty">-Nbr de parts-</option>
+                        <option value="twentyfive">25 parts</option>
+                        <option value="thrity">30 parts</option>
+                        <option value="forty">40 parts</option>
+                        <option value="fifty">50 parts</option>
+                        <option value="other">Autre</option>
+                    </select>
+                    <select name="piecesponge" id="piecesponge">
+                        <option value="qty">-Saveur du biscuit-</option>
+                        <option value="twelve">Vanille</option>
+                        <option value="fifteen">Chocolat</option>
+                    </select>
+                    <select name="pieceflavor" id="pieceflavor">
+                        <option value="qty">-Saveur interieur-</option>
+                        <option value="twelve">Creme vanille + framboise</option>
+                        <option value="twelve">Creme vanille + mangue passion</option>
+                        <option value="twelve">Creme vanille + speculos et caramel</option>
+                        <option value="twelve">Creme vanille + oroe</option>
+                        <option value="twelve">Creme Nutella</option>
+                        <option value="twelve">Creme coco + ananas</option>
+                    </select>
+
+                </section>
+
+                <!--Section Number cake-->
+                <section class="container cake">
+                    <input type="checkbox" id="numbercake" name="numbercake" />
+                    <label for="numbercake">Number cake : </label>
+                    <select name="numbercake" id="numbercakeqty">
+                        <option value="qty">Quantité / type</option>
+                        <option value="one">1 Lettre ou chiffre</option>
+                        <option value="two">2 lettres ou chiffres</option>
+                        <option value="other forms">Autres formes (coeur, sapin, minnie, etc.)</option>
+                    </select>
+                </section>
+
+                <!--Section Cupcake-->
+                <section class="container cup">
+                    <input type="checkbox" id="cupcakes" name="cupcakes" />
+                    <label for="cupcakes">Cupcakes: </label>
+                    <select name="cupcakes" id="cupcakesqty">
+                        <option value="qty">Quantités</option>
+                        <option value="twelve">12</option>
+                        <option value="twentyfour">24</option>
+                        <option value="thritysix">36</option>
+                    </select>
+                </section>
+
+                <!--Section Popcakes-->
+                <section class="container pop">
+                    <input type="checkbox" id="popcakes" name="popcakes" />
+                    <label for="popcakes">Popcakes (10 Qté minimum): </label>
+                    <article>
+                        <label for="popcakesqty">Nombre souhaité :</label>
+                        <input type="number" id="popcakesqty" name="popcakes" min="10" max="100" />
+                    </article>
+                </section>
+
+                <!--Section Sablés-->
+                <section class="container sab">
+                    <input type="checkbox" id="sables" name="sables" />
+                    <label for="sables">Sablés (10 Qté minimum): </label>
+                    <article>
+                        <label for="sablesqty">Nombre souhaité :</label>
+                        <input type="number" id="sablesqty" name="sables" min="10" max="100" />
+                    </article>
+                </section>
+
+                <!--Section Magnumcakes-->
+                <section id="container magnum">
+                    <input type="checkbox" id="magnumcakes" name="magnumcakes" />
+                    <label for="magnumcakes">Magnumcakes (10 Qté minimum): </label>
+                    <article>
+                        <label for="magnumcakesqty">Nombre souhaité :</label>
+                        <input type="number" id="magnumcakesqty" name="magnumcakes" min="10" max="100" />
+                    </article>
+                </section>
+            </fieldset>
+
+            <!--Input Thème -->
+            <section class="form-group">
+                <label for="theme">Thème :</label>
+                <input type="text" id="theme" name="theme" placeholder="Ex : Jungle, Mangas, football, etc." required
+                    pattern="[A-Za-zÀ-ÿ '-]+" />
+            </section>
+
+            <!--Input Evènement-->
+            <section>
+                <label for="evenement">Type d'évènement:</label>
+                <select name="evenement" id="evenement">
+                    <option value=""></option>
+                    <option value="">Mariage</option>
+                    <option value="dog">Anniveraire</option>
+                    <option value="cat">Baptème</option>
+                    <option value="hamster">Baby shower</option>
+                    <option value="parrot">Gender reveal</option>
+                    <option value="spider">Autre</option>
+                </select>
+            </section>
+
+            <!-- Input Remarques -->
+            <section class="form-group">
+                <label for="comments">Remarques :</label>
+                <textarea id="comments" name="comments" placeholder="Ecrivez vos remarques, précisions etc..." rows="10"
+                    cols="100"></textarea>
+            </section>
+
+            <!-- Input Bouton envoyer -->
+            <section class="form-group">
+                <button type="submit"><a href="">Envoyer</a></button>
+            </section>
+        </form>
+        <hr>
+    </main>
+
+    <!------------------------------------------------FOOTER------------------------------------------------>
+    <footer class="foot">
+        <figure>
+            <img src="/assets\images\Logo\logo3.png" alt="logo">
+        </figure>
+        <section class="coordonnées">
+            <p><strong>La Fée Sucrée</strong></p>
+            <p>46 Rue d'Argenteuil</p>
+            <p>95210 Saint-Gratien</p>
+            <p>lafeesucree@yahoo.fr</p>
+            <p>06 10 20 30 40</p>
+            <a href="https://maps.app.goo.gl/dyZVW6dT7daetxkZ9" class="button" target="_blank">Localisation</a>
+        </section>
+        <section class="réseaux">
+            <a href="https://www.instagram.com/la_feesucree/?hl=fr" target="_blank"><img
+                    src="/assets\images\icones\instagram.svg" alt="icones instagram"></a>
+        </section>
+        <section class="mlegales">
+            <a href="/html\mentionslegales.html" target="_blank"><img
+                    src="/assets\images\mentions legales\legal (1).png" alt="logo mentions legales"></a>
+            <a href="/html\mentionslegales.html" target="_blank">
+                <p>Mentions legales</p>
+            </a>
+        </section>
+    </footer>
+</body>
+
+</html>
